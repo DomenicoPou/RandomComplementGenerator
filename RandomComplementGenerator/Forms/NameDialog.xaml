@@ -1,0 +1,20 @@
+﻿<Window x:Name="NameDialogWindow" x:Class="RandomComplementGenerator.Forms.NameDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomComplementGenerator.Forms"
+        mc:Ignorable="d"
+        Title="Enter in your name! (Optional)" Height="250" Width="445">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="57*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="confirmButton" Content="Confirm" HorizontalAlignment="Right" Margin="337,0,20,0" VerticalAlignment="Center" Grid.Row="1" Width="95" Height="25" Click="confirmButton_Click"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Center" Margin="0,161,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="33"/>
+        <Label x:Name="mainLabel" Content="Please enter in your name, to enhance the experience. If you don't want to to enter your name, simply click on the 'No Thank You' button!" HorizontalAlignment="Left" Margin="70,88,0,0" VerticalAlignment="Top" Width="404"/>
+        <Button x:Name="ignoreButton" Content="No Thank You" HorizontalAlignment="Left" Margin="23,0,0,0" VerticalAlignment="Center" Grid.Row="1" Width="95" Height="25" Click="ignoreButton_Click"/>
+
+    </Grid>
+</Window>

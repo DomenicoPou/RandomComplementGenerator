@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "D0UftMeZ9SiZncZgn3otN+HhEd7I4ZcVl3i1BRLRe6JjXj835tHvb0wURDN7OW0ahwYn9u9hsAFdvXlChEEa7w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\domen\\Documents\\GitHub\\RandomComplementGenerator\\RandomComplementGenerator\\RandomComplementGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\domen\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
