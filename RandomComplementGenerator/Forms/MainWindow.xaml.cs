@@ -1,5 +1,5 @@
-﻿using CommonLibrary.Handlers;
-using RandomComplementGenerator.Forms;
+﻿using RandomComplementGenerator.Forms;
+using RandomComplementGenerator.Handlers;
 using RandomComplementGenerator.Models;
 using System;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ namespace RandomComplementGenerator
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ComplimentConfiguration config;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,15 +31,32 @@ namespace RandomComplementGenerator
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            config = ConfigurationHandler.ReadConfig<ComplimentConfiguration>();
-            if (config == null) config = new ComplimentConfiguration();
-            if (config.name == null) HandleConfigurationName();
+            if (ConfigHandler.config.name == null) HandleName\Configuration();
         }
 
-        private void HandleConfigurationName()
+        /// <summary>
+        /// Handles the name configuration using Name Dialog
+        /// </summary>
+        private void HandleName\Configuration()
         {
-            NameDialog test = new NameDialog();
-            test.Show();
+            // Show the Name Dialog window
+            NameDialog nameDialog = new NameDialog();
+            nameDialog.ShowDialog();
+
+            // Get the results of the window and set the name
+            string results = nameDialog.GetValue();
+            ConfigHandler.config.name = results;
+
+            // Save Configuration
+            ConfigHandler.Save();
+        }
+
+        private void complimentButton_Click(object sender, RoutedEventArgs e)
+        {
+            complimentLabel.Opacity = 100;
+            complimentLabel.Content = ComplimentHandler.GenerateCompliment();
+            ConfigHandler.config.howMany++;
+            ConfigHandler.Save();
         }
     }
 }

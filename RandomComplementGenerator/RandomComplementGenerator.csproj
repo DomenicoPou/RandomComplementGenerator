@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Handlers\" />
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
@@ -19,9 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="CommonLibrary">
-      <HintPath>..\..\CommonLibrary\CommonLibrary\CommonLibrary\bin\Release\netcoreapp3.1\CommonLibrary.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\CommonLibrary\CommonLibrary\CommonLibrary\CommonLibrary.csproj" />
   </ItemGroup>
 
 </Project>

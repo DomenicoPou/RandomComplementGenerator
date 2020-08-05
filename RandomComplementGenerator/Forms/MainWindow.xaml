@@ -4,9 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RandomComplementGenerator"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        mc:Ignorable="d" Height="200" Width="450" Loaded="Window_Loaded" Title="Compliment Generator">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="59*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="createdByLabel" Content="Created By: Domenico Poutanen" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="2" Opacity="0.5" FontSize="8" Width="125" Height="25"/>
+        <Button x:Name="complimentButton" Content="Generate" HorizontalAlignment="Center" Click="complimentButton_Click" Grid.Row="2" Width="80" VerticalAlignment="Center" Height="20"/>
+        <Label x:Name="mainLabel" Content="Compliment Generator" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Height="35" Width="205"/>
+        <Label x:Name="complimentLabel" Content="Generate Compliment" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="376" Opacity="0.7"/>
+        <Menu x:Name="complimentMenu">
+            <RibbonButton Content="Test"/>
+        </Menu>
 
     </Grid>
 </Window>

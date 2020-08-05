@@ -5,16 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RandomComplementGenerator.Forms"
         mc:Ignorable="d"
-        Title="Enter in your name! (Optional)" Height="250" Width="445">
+        Title="Enter in your name! (Optional)" Height="180" Width="445" MinWidth="445" MaxWidth="445" MinHeight="180" MaxHeight="180">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="26*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="14*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="confirmButton" Content="Confirm" HorizontalAlignment="Right" Margin="337,0,20,0" VerticalAlignment="Center" Grid.Row="1" Width="95" Height="25" Click="confirmButton_Click"/>
-        <TextBox x:Name="nameTextBox" HorizontalAlignment="Center" Margin="0,161,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Height="33"/>
-        <Label x:Name="mainLabel" Content="Please enter in your name, to enhance the experience. If you don't want to to enter your name, simply click on the 'No Thank You' button!" HorizontalAlignment="Left" Margin="70,88,0,0" VerticalAlignment="Top" Width="404"/>
-        <Button x:Name="ignoreButton" Content="No Thank You" HorizontalAlignment="Left" Margin="23,0,0,0" VerticalAlignment="Center" Grid.Row="1" Width="95" Height="25" Click="ignoreButton_Click"/>
+        <Button x:Name="confirmButton" Content="Confirm" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Width="94" Height="25" Click="confirmButton_Click" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="225" Height="20" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="1"/>
+        <Button x:Name="ignoreButton" Content="No Thank You" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Width="96" Height="25" Click="ignoreButton_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Name: " HorizontalAlignment="Right" Margin="72,0,0,0" VerticalAlignment="Center" Height="26" Width="48" Grid.Row="1"/>
+        <TextBlock x:Name="mainTextBlock" Margin="10,0,0,0" Text="Please enter in your name, to enhance the experience. If you don't want to to enter your name, simply click on the 'No Thank You' button!" TextWrapping="Wrap" Grid.ColumnSpan="3" HorizontalAlignment="Center" Width="406" Height="32" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>

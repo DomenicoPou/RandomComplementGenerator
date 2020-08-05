@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomComplementGenerator", "RandomComplementGenerator\RandomComplementGenerator.csproj", "{EABBDE1F-728B-4582-979E-5000C84740BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomComplementGenerator", "RandomComplementGenerator\RandomComplementGenerator.csproj", "{EABBDE1F-728B-4582-979E-5000C84740BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLibrary", "..\CommonLibrary\CommonLibrary\CommonLibrary\CommonLibrary.csproj", "{F0E8D018-84FD-4A6B-AE21-C7CF182CACD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EABBDE1F-728B-4582-979E-5000C84740BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EABBDE1F-728B-4582-979E-5000C84740BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EABBDE1F-728B-4582-979E-5000C84740BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0E8D018-84FD-4A6B-AE21-C7CF182CACD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E8D018-84FD-4A6B-AE21-C7CF182CACD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E8D018-84FD-4A6B-AE21-C7CF182CACD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E8D018-84FD-4A6B-AE21-C7CF182CACD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,3 +22,4 @@ C:\Users\domen\Documents\GitHub\RandomComplementGenerator\RandomComplementGenera
 C:\Users\domen\Documents\GitHub\RandomComplementGenerator\RandomComplementGenerator\obj\Debug\netcoreapp3.1\RandomComplementGenerator.csproj.CoreCompileInputs.cache
 C:\Users\domen\Documents\GitHub\RandomComplementGenerator\RandomComplementGenerator\obj\Debug\netcoreapp3.1\Forms\NameDialog.g.cs
 C:\Users\domen\Documents\GitHub\RandomComplementGenerator\RandomComplementGenerator\obj\Debug\netcoreapp3.1\Forms\NameDialog.baml
+C:\Users\domen\Documents\GitHub\RandomComplementGenerator\RandomComplementGenerator\obj\Debug\netcoreapp3.1\RandomComplementGenerator.csprojAssemblyReference.cache
