@@ -1,0 +1,25 @@
+﻿{
+  "Morning": [
+    "Morning",
+    "Good Morning",
+    "Good Morrow"
+  ],
+  "Afternoon": [
+    "Afternoon",
+    "Good Afternoon",
+    "Good Evening",
+    "Evening"
+  ],
+  "Normal": [
+    "Welcome",
+    "Hello",
+    "Greetings",
+    "Hi",
+    "Howdy",
+    "Ahoy",
+    "Bonjour",
+    "G'Day",
+    "Hi there",
+    "Howzit"
+  ]
+}

@@ -24,20 +24,28 @@ namespace RandomComplementGenerator
     public partial class MainWindow : Window
     {
 
+        /// <summary>
+        /// Main window constructor
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event when the Main Window has loaded
+        /// </summary>
+        /// <param name="sender">The window</param>
+        /// <param name="e">The event triggered</param>
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if (ConfigHandler.config.name == null) HandleName\Configuration();
+            if (ConfigHandler.config.name == null) HandleNameConfiguration();
         }
 
         /// <summary>
         /// Handles the name configuration using Name Dialog
         /// </summary>
-        private void HandleName\Configuration()
+        private void HandleNameConfiguration()
         {
             // Show the Name Dialog window
             NameDialog nameDialog = new NameDialog();
@@ -51,10 +59,20 @@ namespace RandomComplementGenerator
             ConfigHandler.Save();
         }
 
+        /// <summary>
+        /// Handles the compliment label generation
+        /// </summary>
+        /// <param name="sender">The button that sent the even</param>
+        /// <param name="e">The event object</param>
         private void complimentButton_Click(object sender, RoutedEventArgs e)
         {
+            // Set the opacity to 100
             complimentLabel.Opacity = 100;
+
+            // Generate the compliment, and set it to the labe;
             complimentLabel.Content = ComplimentHandler.GenerateCompliment();
+
+            // Incriment the users compliment integer, and save
             ConfigHandler.config.howMany++;
             ConfigHandler.Save();
         }

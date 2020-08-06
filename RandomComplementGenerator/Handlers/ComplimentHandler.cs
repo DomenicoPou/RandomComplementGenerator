@@ -7,6 +7,7 @@ namespace RandomComplementGenerator.Handlers
 {
     public static class ComplimentHandler
     {
+        
         public static string GenerateCompliment()
         {
             ComplimentConfiguration config = ConfigHandler.config;

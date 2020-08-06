@@ -2,6 +2,7 @@
 using RandomComplementGenerator.Models;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace RandomComplementGenerator.Handlers
@@ -12,7 +13,9 @@ namespace RandomComplementGenerator.Handlers
     public static class ConfigHandler
     {
         public static ComplimentConfiguration config;
-            
+
+        public static ComplimentComponents components;
+
         // Used to only allow one pull of the configuration files
         private static bool firstPull = true;
 
@@ -30,6 +33,18 @@ namespace RandomComplementGenerator.Handlers
                 if (config == null) config = new ComplimentConfiguration();
                 if (config.howMany == null) config.howMany = 0;
                 if (config.favoriteCompliments == null) config.favoriteCompliments = new List<string>();
+
+                // Get Components
+                components = new ComplimentComponents();
+                Assembly assembly = typeof(ConfigHandler).Assembly;
+                components.Bridge = EmbeddedJsonResourceHandler
+                    .ReadEmbeddedResource<List<string>>(assembly, "BridgeData.json");
+                components.GreetingComponents = EmbeddedJsonResourceHandler
+                    .ReadEmbeddedResource<GreetingComponents>(assembly, "GreetingData.json");
+                components.NormalCompliments = EmbeddedJsonResourceHandler
+                    .ReadEmbeddedResource<List<string>>(assembly, "NormalComplimentData.json");
+                components.NormalComponents = EmbeddedJsonResourceHandler
+                    .ReadEmbeddedResource<NormalComponents>(assembly, "ComplimentData.json");
 
                 firstPull = false;
             }

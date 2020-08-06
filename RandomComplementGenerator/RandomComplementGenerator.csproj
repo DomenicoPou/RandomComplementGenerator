@@ -11,6 +11,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Data\BridgeData.json" />
+    <None Remove="Data\ComplimentData.json" />
+    <None Remove="Data\GreetingData.json" />
+    <None Remove="Data\NormalComplimentData.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Data\BridgeData.json" />
+    <EmbeddedResource Include="Data\ComplimentData.json" />
+    <EmbeddedResource Include="Data\GreetingData.json" />
+    <EmbeddedResource Include="Data\NormalComplimentData.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 

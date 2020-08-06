@@ -15,9 +15,6 @@
         <Button x:Name="complimentButton" Content="Generate" HorizontalAlignment="Center" Click="complimentButton_Click" Grid.Row="2" Width="80" VerticalAlignment="Center" Height="20"/>
         <Label x:Name="mainLabel" Content="Compliment Generator" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Height="35" Width="205"/>
         <Label x:Name="complimentLabel" Content="Generate Compliment" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Width="376" Opacity="0.7"/>
-        <Menu x:Name="complimentMenu">
-            <RibbonButton Content="Test"/>
-        </Menu>
 
     </Grid>
 </Window>
