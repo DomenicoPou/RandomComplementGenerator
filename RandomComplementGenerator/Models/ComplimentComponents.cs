@@ -12,6 +12,7 @@ namespace RandomComplementGenerator.Models
         public NormalComponents NormalComponents { get; set; }
         public GreetingComponents GreetingComponents { get; set; }
         public List<string> NormalCompliments { get; set; }
+        public Dictionary<string, int> praiseCombinations { get; set; }
     }
 
     public class GreetingComponents

@@ -34,7 +34,7 @@ namespace RandomComplementGenerator.Handlers
                 if (config.howMany == null) config.howMany = 0;
                 if (config.favoriteCompliments == null) config.favoriteCompliments = new List<string>();
 
-                // Get Components
+                // Get Components using embedded resources
                 components = new ComplimentComponents();
                 Assembly assembly = typeof(ConfigHandler).Assembly;
                 components.Bridge = EmbeddedJsonResourceHandler
@@ -45,6 +45,10 @@ namespace RandomComplementGenerator.Handlers
                     .ReadEmbeddedResource<List<string>>(assembly, "NormalComplimentData.json");
                 components.NormalComponents = EmbeddedJsonResourceHandler
                     .ReadEmbeddedResource<NormalComponents>(assembly, "ComplimentData.json");
+                components.praiseCombinations = new Dictionary<string, int>();
+                components.praiseCombinations.Add("Single", components.NormalComponents.Single.Count);
+                components.praiseCombinations.Add("Normal", components.NormalCompliments.Count);
+                components.praiseCombinations.Add("Combination", components.NormalComponents.Prefix.Count * components.NormalComponents.Suffix.Count);
 
                 firstPull = false;
             }
